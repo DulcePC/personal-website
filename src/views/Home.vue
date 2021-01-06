@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <HeaderComponent />
     <img alt="Vue logo" src="../assets/logo.png" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <h1>{{ mensaje }}</h1>
@@ -34,13 +35,9 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
-  components: {
-    // HelloWorld
-  },
   data: function() {
     return {
       mensaje: "hola",
