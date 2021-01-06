@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <HeaderComponent />
     <img alt="Vue logo" src="../assets/logo.png" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <h1>{{ mensaje }}</h1>

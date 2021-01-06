@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/scss/styles.scss";
+@import "./assets/scss/styles";
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

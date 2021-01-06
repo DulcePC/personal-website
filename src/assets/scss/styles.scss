@@ -1,11 +1,13 @@
 // import bootstrap
 
-@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/bootstrap/scss/functions';
-@import 'node_modules/bootstrap/scss/variables';
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints';
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins/_breakpoints';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 
+//import font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 //Custom Styles
 a {
