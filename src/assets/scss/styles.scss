@@ -84,3 +84,22 @@ p {
     z-index: 2;
   }
 }
+
+.form-control {
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $primary-color;
+  border-radius: 0px;
+
+  &:focus {
+    border: 1px solid $primary-color !important;
+    outline: transparent !important;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $primary-color;
+    font-weight: 300;
+  }
+}

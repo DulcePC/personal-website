@@ -1,24 +1,27 @@
 <template>
-  <header :class="{ 'on-scroll': onScroll }" id="header">
+  <header
+    :class="{ 'on-scroll': onScroll, 'in-other-page': !isInHomeRoute }"
+    id="header"
+  >
     <div class="container">
       <nav class="main-nav" :class="{ open: openMenu }">
         <ul class="main-menu">
           <li>
-            <a href="#!" v-scroll-to="{ element: '#home' }">
+            <router-link :to="{ name: 'home' }">
               Home
-            </a>
+            </router-link>
           </li>
-          <li>
+          <li v-show="isInHomeRoute">
             <a href="javascript:;" v-scroll-to="{ element: '#about' }">
               About
             </a>
           </li>
           <li>
-            <a href="javascript:;" v-scroll-to="{ element: '#blog' }">
+            <router-link :to="{ name: 'CrudBlog' }">
               Blog
-            </a>
+            </router-link>
           </li>
-          <li>
+          <li v-show="isInHomeRoute">
             <a href="javascript:;" v-scroll-to="{ element: '#contact' }">
               Contact
             </a>
@@ -54,6 +57,11 @@ export default {
       }
     }
   },
+  computed: {
+    isInHomeRoute() {
+      return this.$route.name == "home";
+    }
+  },
   created() {
     window.addEventListener("scroll", this.handleScroll);
   }
@@ -79,8 +87,19 @@ header {
     height: 50px;
   }
 
-  &.on-scroll {
+  &.on-scroll,
+  &.in-other-page {
     background-color: $primary-color;
+
+    .main-menu {
+      li {
+        &:hover {
+          a {
+            color: white !important;
+          }
+        }
+      }
+    }
   }
 
   > .container,

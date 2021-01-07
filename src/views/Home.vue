@@ -221,7 +221,6 @@
 
 <script>
 // @ is an alias to /src
-
 export default {
   name: "Home",
   data: function() {
@@ -459,25 +458,6 @@ export default {
   }
 
   .contact-form {
-    .form-control {
-      height: 40px;
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      color: $primary-color;
-      border-radius: 0px;
-
-      &:focus {
-        border: 1px solid $primary-color !important;
-        outline: transparent !important;
-        box-shadow: none;
-      }
-
-      &::placeholder {
-        color: $primary-color;
-        font-weight: 300;
-      }
-    }
-
     textarea {
       height: 160px !important;
     }
@@ -505,7 +485,8 @@ export default {
   .contact-links {
     padding: 15px;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
     margin-bottom: 15px;
     background: #f5f5f5;
     color: $primary-color;
