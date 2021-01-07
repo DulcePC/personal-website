@@ -12,7 +12,10 @@
             </router-link>
           </li>
           <li v-show="isInHomeRoute">
-            <a href="javascript:;" v-scroll-to="{ element: '#about' }">
+            <a
+              href="javascript:;"
+              v-scroll-to="{ element: '#about', offset: -60 }"
+            >
               About
             </a>
           </li>
@@ -22,7 +25,10 @@
             </router-link>
           </li>
           <li v-show="isInHomeRoute">
-            <a href="javascript:;" v-scroll-to="{ element: '#contact' }">
+            <a
+              href="javascript:;"
+              v-scroll-to="{ element: '#contact', offset: -60 }"
+            >
               Contact
             </a>
           </li>
