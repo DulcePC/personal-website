@@ -7,10 +7,80 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 
 //import font
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
 
 //Custom Styles
+
 a {
   text-decoration: none !important;
   cursor: pointer;
+}
+
+$primary-color: rgb(255, 166, 0);
+
+h2 {
+  font-family: "Redressed", cursive;
+  font-size: 34px;
+  line-height: 40px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.introduction-page {
+  width: 100%;
+  background-image: url('~@/assets/img/introduction-home.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  &.in-home {
+    @include size(100%,50vh);
+  }
+
+  figure {
+    @include size(90px);
+    border-radius: 50%;
+    display: block;
+    margin: 0px auto;
+    overflow: hidden;
+    border: 3px solid $primary-color;
+    z-index: 3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: rotate(36deg);
+    }
+  }
+
+  h1 {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 3;
+    font-family: 'Redressed', cursive;
+  }
+
+  &::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.57);
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
 }

@@ -36,10 +36,13 @@ export default {
 @import "../assets/scss/styles";
 
 header {
-  background: rgb(255, 166, 0);
+  // background: rgb(255, 166, 0);
   width: 100%;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 
   @include media-breakpoint-up(lg) {
     height: 60px;
@@ -139,6 +142,13 @@ header {
 
           @include media-breakpoint-down(sm) {
             padding-left: 15px;
+          }
+        }
+
+        &:hover,
+        &.active {
+          a {
+            color: $primary-color;
           }
         }
 

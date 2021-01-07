@@ -3,12 +3,15 @@
     <div class="container">
       <ul class="social-media">
         <li>
-          <a href="https://www.instagram.com/dulcep.c/" target="blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
+          <a href="https://www.instagram.com/dulcep.c/" target="blank">
+            <i class="fab fa-instagram"></i>
+          </a>
         </li>
         <li>
           <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li>
+          <a href="#!"><i class="fab fa-github-alt"></i></a>
         </li>
       </ul>
       <hr />
