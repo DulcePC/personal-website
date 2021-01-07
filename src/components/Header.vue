@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{ 'on-scroll': onScroll }" id="header">
     <div class="container">
       <nav class="main-nav" :class="{ open: openMenu }">
         <ul class="main-menu">
@@ -37,13 +37,20 @@ export default {
   name: "HeaderComponent",
   data: function() {
     return {
-      openMenu: false
+      openMenu: false,
+      onScroll: false
     };
   },
   methods: {
     toggleMenu() {
       this.openMenu = !this.openMenu;
+    },
+    handleScroll() {
+      this.onScroll = true;
     }
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
   }
 };
 </script>
@@ -52,7 +59,6 @@ export default {
 @import "../assets/scss/styles";
 
 header {
-  // background: rgb(255, 166, 0);
   width: 100%;
   display: flex;
   align-items: center;
@@ -66,6 +72,10 @@ header {
 
   @include media-breakpoint-down(md) {
     height: 50px;
+  }
+
+  &.on-scroll {
+    background-color: $primary-color;
   }
 
   > .container,
