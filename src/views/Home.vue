@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <div class="introduction-page in-home">
+    <div class="introduction-page in-home" id="home">
       <figure>
         <img src="../assets/img/dulce.jpg" alt="Profile photo" />
       </figure>
       <h1>Hi!, I'm Dulce</h1>
     </div>
-    <section class="about-me-section">
+    <section class="about-me-section" id="about">
       <div class="container">
         <h2>Welcome To My Site</h2>
         <p>
@@ -124,7 +124,7 @@
         </div>
       </div>
     </section>
-    <section class="blog-introduction-section">
+    <section class="blog-introduction-section" id="blog">
       <div class="container">
         <h2>The junior daily blog</h2>
         <p>
@@ -175,7 +175,7 @@
         </div>
       </div>
     </section>
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="container">
         <h2 class="text-center">Contact me</h2>
         <div class="row justify-content-center mt-4">

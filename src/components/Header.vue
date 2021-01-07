@@ -3,10 +3,26 @@
     <div class="container">
       <nav class="main-nav" :class="{ open: openMenu }">
         <ul class="main-menu">
-          <li><a href="#!">Home</a></li>
-          <li><a href="#!">About</a></li>
-          <li><a href="#!">Blog</a></li>
-          <li><a href="#!">Contact</a></li>
+          <li>
+            <a href="#!" v-scroll-to="{ element: '#home' }">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" v-scroll-to="{ element: '#about' }">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" v-scroll-to="{ element: '#blog' }">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" v-scroll-to="{ element: '#contact' }">
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
       <a href="javascript:;" class="header-button" @click="toggleMenu()">
