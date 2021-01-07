@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <HeaderComponent />
-    <router-view />
+    <main id="main" :class="{ 'p-0': isInHomeRoute }">
+      <router-view />
+    </main>
     <FooterComponent />
   </div>
 </template>
@@ -15,6 +17,11 @@ export default {
   components: {
     HeaderComponent,
     FooterComponent
+  },
+  computed: {
+    isInHomeRoute() {
+      return this.$route.name == "home";
+    }
   }
 };
 </script>
