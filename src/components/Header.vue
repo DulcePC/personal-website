@@ -46,7 +46,12 @@ export default {
       this.openMenu = !this.openMenu;
     },
     handleScroll() {
-      this.onScroll = true;
+      var scrollLocation = window.scrollY;
+      if (scrollLocation > 200) {
+        this.onScroll = true;
+      } else {
+        this.onScroll = false;
+      }
     }
   },
   created() {
