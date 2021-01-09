@@ -458,25 +458,6 @@ export default {
   }
 
   .contact-form {
-    textarea {
-      height: 160px !important;
-    }
-
-    button {
-      border: none;
-      background-color: $primary-color;
-      color: white;
-      font-weight: bold;
-      padding: 5px 30px;
-      border-radius: 5px;
-      display: inline-block;
-      font-size: 14px;
-
-      &:focus {
-        outline: transparent;
-      }
-    }
-
     @include media-breakpoint-down(sm) {
       margin-bottom: 20px;
     }
