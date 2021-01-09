@@ -4,9 +4,6 @@
       <h1>crud-blog</h1>
       <div class="row justify-content-center">
         <div class="col-lg-6">
-          <h1>{{ titulo }}</h1>
-          <h2>{{ clave }}</h2>
-          <h3>{{ description }}</h3>
           <ul>
             <li v-for="item in filterBlogList" v-bind:key="item.id">
               {{ item.titulo }} {{ item.description }}
