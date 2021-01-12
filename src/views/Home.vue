@@ -182,16 +182,32 @@
           <div class="col-xl-5 col-lg-5 col-md-6">
             <form action="" class="contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Name"
+                  v-model="name"
+                />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email"
+                  v-model="email"
+                />
               </div>
               <div class="form-group">
-                <textarea class="form-control" placeholder="Message"></textarea>
+                <textarea
+                  class="form-control"
+                  placeholder="Message"
+                  v-model="descriptionMessage"
+                ></textarea>
               </div>
               <div class="form-group d-flex justify-content-end m-0">
-                <button type="submit">Enviar</button>
+                <button type="submit" @click.prevent="sendMessage">
+                  Enviar
+                </button>
               </div>
             </form>
           </div>
@@ -225,21 +241,30 @@ export default {
   name: "Home",
   data: function() {
     return {
-      mensaje: "hola",
-      kiss: 0,
-      estudios: ["js", "vue"],
-      lista: [
-        { titulo: "Titulo 1", description: "description one" },
-        { titulo: "Titulo 2", description: "description two" },
-        { titulo: "Titulo 3", description: "description three" }
-      ],
-      nombre: "",
-      apellido: ""
+      name: "",
+      email: "",
+      descriptionMessage: "",
+      messengerService: []
     };
   },
-  computed: {
-    nombreCompleto: function() {
-      return this.nombre + " " + this.apellido;
+  methods: {
+    sendMessage() {
+      var messages = {
+        name: this.name,
+        email: this.email,
+        descriptionMessage: this.descriptionMessage
+      };
+
+      this.messengerService.push(messages);
+      //ref(nombre de como se va llamar a nuestra tabla para que guarde nuestros objetos)
+      firebase
+        .database()
+        .ref("messengerContact/" + clave)
+        .set(messages);
+      return this.clearForm();
+    },
+    clearForm() {
+      (this.name = ""), (this.email = ""), (this.descriptionMessage = "");
     }
   }
 };
