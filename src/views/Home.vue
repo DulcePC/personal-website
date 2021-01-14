@@ -191,7 +191,7 @@
               </div>
               <div class="form-group">
                 <input
-                  type="text"
+                  type="email"
                   class="form-control"
                   placeholder="Email"
                   v-model="email"
@@ -202,7 +202,8 @@
                   class="form-control"
                   placeholder="Message"
                   v-model="descriptionMessage"
-                ></textarea>
+                >
+                </textarea>
               </div>
               <div class="form-group d-flex justify-content-end m-0">
                 <button type="submit" @click.prevent="sendMessage">
@@ -237,6 +238,8 @@
 
 <script>
 // @ is an alias to /src
+import firebase from "firebase";
+
 export default {
   name: "Home",
   data: function() {
@@ -259,7 +262,7 @@ export default {
       //ref(nombre de como se va llamar a nuestra tabla para que guarde nuestros objetos)
       firebase
         .database()
-        .ref("messengerContact/" + clave)
+        .ref("messengerContact/" + this.name)
         .set(messages);
       return this.clearForm();
     },
