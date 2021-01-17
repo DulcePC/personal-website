@@ -4,7 +4,7 @@
       <figure>
         <img src="../assets/img/dulce.jpg" alt="Profile photo" />
       </figure>
-      <h1>Hi!, I'm Dulce</h1>
+      <h1 class="m-0">Hi!, I'm Dulce</h1>
     </div>
     <section class="about-me-section" id="about">
       <div class="container">
