@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import CrudBlog from "../views/Blog/Crud-blog.vue";
+import BlogPage from "../views/Blog/Blog-page.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ const routes = [
     path: "/crud-blog",
     name: "CrudBlog",
     component: CrudBlog
+  },
+  {
+    path: "/blog-page",
+    name: "BlogPage",
+    component: BlogPage
   }
 ];
 

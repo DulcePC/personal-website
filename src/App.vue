@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HeaderComponent />
-    <main id="main" :class="{ 'p-0': isInHomeRoute }">
+    <main id="main" :class="{ 'p-0': isInHomeRoute || isInBlogRoute }">
       <router-view />
     </main>
     <FooterComponent />
@@ -21,6 +21,9 @@ export default {
   computed: {
     isInHomeRoute() {
       return this.$route.name == "home";
+    },
+    isInBlogRoute() {
+      return this.$route.name == "BlogPage";
     }
   }
 };

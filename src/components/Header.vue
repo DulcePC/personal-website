@@ -1,6 +1,9 @@
 <template>
   <header
-    :class="{ 'on-scroll': onScroll, 'in-other-page': !isInHomeRoute }"
+    :class="{
+      'on-scroll': onScroll,
+      'in-other-page': !isInHomeRoute && !isInBlogRoute
+    }"
     id="header"
   >
     <div class="container">
@@ -20,7 +23,7 @@
             </a>
           </li>
           <li>
-            <router-link :to="{ name: 'CrudBlog' }">
+            <router-link :to="{ name: 'BlogPage' }">
               Blog
             </router-link>
           </li>
@@ -66,6 +69,9 @@ export default {
   computed: {
     isInHomeRoute() {
       return this.$route.name == "home";
+    },
+    isInBlogRoute() {
+      return this.$route.name == "BlogPage";
     }
   },
   created() {
@@ -84,6 +90,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 100;
+  transition: 0.3s;
 
   @include media-breakpoint-up(lg) {
     height: 60px;
