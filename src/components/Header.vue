@@ -2,7 +2,7 @@
   <header
     :class="{
       'on-scroll': onScroll,
-      'in-other-page': !isInHomeRoute && !isInBlogRoute
+      'in-other-page': !isInHomeRoute && !isInBlogRoute && !isInBlogDetailRoute
     }"
     id="header"
   >
@@ -72,6 +72,9 @@ export default {
     },
     isInBlogRoute() {
       return this.$route.name == "BlogPage";
+    },
+    isInBlogDetailRoute() {
+      return this.$route.name == "BlogDetail";
     }
   },
   created() {

@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <HeaderComponent />
-    <main id="main" :class="{ 'p-0': isInHomeRoute || isInBlogRoute }">
+    <main
+      id="main"
+      :class="{ 'p-0': isInHomeRoute || isInBlogRoute || isInBlogDetailRoute }"
+    >
       <router-view />
     </main>
     <FooterComponent />
@@ -24,6 +27,9 @@ export default {
     },
     isInBlogRoute() {
       return this.$route.name == "BlogPage";
+    },
+    isInBlogDetailRoute() {
+      return this.$route.name == "BlogDetail";
     }
   }
 };
