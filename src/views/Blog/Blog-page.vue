@@ -15,7 +15,7 @@
       <div class="container">
         <ul class="list-articles">
           <li>
-            <a href="#!">
+            <a href="/blog-detail">
               <article>
                 <figure>
                   <img
@@ -29,7 +29,7 @@
                     Lorem ipsum dolor sit amet, consint santium inventore.
                     Accusamus animi a soluta beatae vero quis nulla similique.
                   </p>
-                  <span class="link-style">Read</span>
+                  <span class="link-style">Read now</span>
                 </div>
               </article>
             </a>
