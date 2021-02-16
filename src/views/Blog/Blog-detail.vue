@@ -5,7 +5,7 @@
     </div>
     <div class="container py-4">
       <div class="row justify-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-7">
           <h2 class="text-primary">This is the sub title</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque vel
@@ -60,7 +60,9 @@ h3 {
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  text-align: justify;
 }
 
 figure {
