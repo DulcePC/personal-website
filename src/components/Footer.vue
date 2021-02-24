@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer :class="{ 'd-none': isInLoginAdmin }">
     <div class="container">
       <ul class="social-media">
         <li>
@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  name: "FooterComponent"
+  name: "FooterComponent",
+  methods: {
+    isInLoginAdmin() {
+      return this.$route.name == "Login";
+    }
+  }
 };
 </script>
 

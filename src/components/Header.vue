@@ -2,7 +2,8 @@
   <header
     :class="{
       'on-scroll': onScroll,
-      'in-other-page': !isInHomeRoute && !isInBlogRoute
+      'in-other-page': !isInHomeRoute && !isInBlogRoute,
+      'd-none': isInLoginAdmin
     }"
     id="header"
   >
@@ -72,6 +73,9 @@ export default {
     },
     isInBlogRoute() {
       return this.$route.name == "BlogPage";
+    },
+    isInLoginAdmin() {
+      return this.$route.name == "Login";
     }
   },
   created() {
