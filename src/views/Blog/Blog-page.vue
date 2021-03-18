@@ -13,96 +13,20 @@
     </div>
     <section class="blog-content pt-5 pb-5">
       <div class="container">
-        <ul class="list-articles">
-          <li>
-            <a href="/blog-detail">
-              <article>
-                <figure>
-                  <img
-                    src="../../assets/img/experiences-background.jpg"
-                    alt="image-post-name"
-                  />
-                </figure>
-                <div class="article-information">
-                  <h4>1This its my post title</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consint santium inventore.
-                    Accusamus animi a soluta beatae vero quis nulla similique.
-                  </p>
-                  <span class="link-style">Read now</span>
-                </div>
-              </article>
-            </a>
-          </li>
-          <li>
-            <a href="#!">
-              <article>
-                <figure>
-                  <img
-                    src="../../assets/img/experiences-background.jpg"
-                    alt="image-post-name"
-                  />
-                </figure>
-                <div class="article-information">
-                  <h4>This its my post title</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consint santium inventore.
-                    Accusamus animi a soluta beatae vero quis nulla similique.
-                  </p>
-                  <span class="link-style">Read now</span>
-                </div>
-              </article>
-            </a>
-          </li>
-          <li>
-            <a href="#!">
-              <article>
-                <figure>
-                  <img
-                    src="../../assets/img/experiences-background.jpg"
-                    alt="image-post-name"
-                  />
-                </figure>
-                <div class="article-information">
-                  <h4>This its my post title</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consint santium inventore.
-                    Accusamus animi a soluta beatae vero quis nulla similique.
-                  </p>
-                  <span class="link-style">Read now</span>
-                </div>
-              </article>
-            </a>
-          </li>
-          <li>
-            <a href="#!">
-              <article>
-                <figure>
-                  <img
-                    src="../../assets/img/experiences-background.jpg"
-                    alt="image-post-name"
-                  />
-                </figure>
-                <div class="article-information">
-                  <h4>1This its my post title</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consint santium inventore.
-                    Accusamus animi a soluta beatae vero quis nulla similique.
-                  </p>
-                  <span class="link-style">Read</span>
-                </div>
-              </article>
-            </a>
-          </li>
-        </ul>
+        <ListArticle />
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import ListArticle from "../../components/ListArticles";
+
 export default {
-  name: "BlogPage"
+  name: "BlogPage",
+  components: {
+    ListArticle
+  }
 };
 </script>
 

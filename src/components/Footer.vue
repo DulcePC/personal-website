@@ -23,7 +23,7 @@
 <script>
 export default {
   name: "FooterComponent",
-  methods: {
+  computed: {
     isInLoginAdmin() {
       return this.$route.name == "Login";
     }

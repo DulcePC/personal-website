@@ -127,10 +127,11 @@
     <section class="blog-introduction-section" id="blog">
       <div class="container">
         <h2>The junior daily blog</h2>
-        <p>
+        <p class="mb-4">
           A simple blog to share the experiences of a junior, just for fun ...
         </p>
-        <h1>Soon...</h1>
+        <!-- <h1>Soon...</h1> -->
+        <ListArticle />
       </div>
     </section>
     <section class="experiences-section">
@@ -239,6 +240,7 @@
 <script>
 // @ is an alias to /src
 import firebase from "firebase";
+import ListArticle from "../components/ListArticles";
 
 export default {
   name: "Home",
@@ -269,6 +271,9 @@ export default {
     clearForm() {
       (this.name = ""), (this.email = ""), (this.descriptionMessage = "");
     }
+  },
+  components: {
+    ListArticle
   }
 };
 </script>
