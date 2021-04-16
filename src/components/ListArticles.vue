@@ -1,7 +1,7 @@
 <template>
   <ul class="list-articles">
     <li v-for="post in posts" :key="post.id">
-      <a href="/blog-etail">
+      <a href="/blog-detail">
         <article>
           <figure>
             <img :src="post.image" :alt="post.title" />
