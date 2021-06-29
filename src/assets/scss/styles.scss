@@ -1,4 +1,7 @@
-
+// Import tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 //import font
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
@@ -8,6 +11,7 @@
 
 body {
   font-family: "Roboto", sans-serif !important;
+  @apply bg-pink-400;
 }
 
 a {

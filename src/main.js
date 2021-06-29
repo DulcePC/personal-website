@@ -6,6 +6,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import VeeValidate from 'vee-validate';
+import './assets/scss/styles.scss';
 
 //scrollTo
 var VueScrollTo = require("vue-scrollto");

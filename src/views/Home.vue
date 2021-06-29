@@ -157,7 +157,7 @@
               <h6>Junior Front-end Developer</h6>
               <p>
                 In charge of doing the web layout tasks in
-                <a href="https://www.kation.com.do/" target="blank">Kation Interactive</a>.
+                <a href="https://www.kation.com.do/" target="blank">Kation Interactive</a>
               </p>
             </div>
             <div class="experience-card">
@@ -165,7 +165,7 @@
               <h6>Junior Front-end Developer</h6>
               <p>
                 In charge of doing the web layout tasks in
-                <a href="https://octoberstudio.com.do/">October Studio</a>.
+                <a href="https://octoberstudio.com.do/">October Studio</a>
               </p>
             </div>
           </div>
