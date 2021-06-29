@@ -28,8 +28,13 @@ export default {
     isInBlogRoute() {
       return this.$route.name == "BlogPage";
     },
+<<<<<<< HEAD
+    isInLoginAdmin() {
+      return this.$route.name == "Login";
+=======
     isInBlogDetailRoute() {
       return this.$route.name == "BlogDetail";
+>>>>>>> master
     }
   }
 };

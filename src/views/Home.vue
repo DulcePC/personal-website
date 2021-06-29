@@ -47,7 +47,7 @@
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 60%"
+                style="width: 50%"
                 aria-valuenow="25"
                 aria-valuemin="0"
                 aria-valuemax="100"
@@ -93,6 +93,19 @@
               ></div>
             </div>
           </div>
+          <div class="col-lg-4">
+            <h6 class="skill-title">TailwindCss</h6>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 40%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -127,10 +140,11 @@
     <section class="blog-introduction-section" id="blog">
       <div class="container">
         <h2>The junior daily blog</h2>
-        <p>
+        <p class="mb-4">
           A simple blog to share the experiences of a junior, just for fun ...
         </p>
-        <h1>Soon...</h1>
+        <!-- <h1>Soon...</h1> -->
+        <ListArticle />
       </div>
     </section>
     <section class="experiences-section">
@@ -143,7 +157,7 @@
               <h6>Junior Front-end Developer</h6>
               <p>
                 In charge of doing the web layout tasks in
-                <a href="#!">Kation Interactive</a>.
+                <a href="https://www.kation.com.do/" target="blank">Kation Interactive</a>.
               </p>
             </div>
             <div class="experience-card">
@@ -151,7 +165,7 @@
               <h6>Junior Front-end Developer</h6>
               <p>
                 In charge of doing the web layout tasks in
-                <a href="#!">October Studio</a>.
+                <a href="https://octoberstudio.com.do/">October Studio</a>.
               </p>
             </div>
           </div>
@@ -188,6 +202,7 @@
                   placeholder="Name"
                   v-model="name"
                 />
+                <p v-if="error">Error</p>
               </div>
               <div class="form-group">
                 <input
@@ -196,6 +211,7 @@
                   placeholder="Email"
                   v-model="email"
                 />
+                <p v-if="error">Error</p>
               </div>
               <div class="form-group">
                 <textarea
@@ -204,6 +220,7 @@
                   v-model="descriptionMessage"
                 >
                 </textarea>
+                <p v-if="error">Error</p>
               </div>
               <div class="form-group d-flex justify-content-end m-0">
                 <button type="submit" @click.prevent="sendMessage">
@@ -238,7 +255,7 @@
 
 <script>
 // @ is an alias to /src
-import firebase from "firebase";
+import ListArticle from "../components/ListArticles";
 
 export default {
   name: "Home",
@@ -247,28 +264,25 @@ export default {
       name: "",
       email: "",
       descriptionMessage: "",
-      messengerService: []
+      messengerService: [],
+      error: false
     };
   },
   methods: {
     sendMessage() {
-      var messages = {
-        name: this.name,
-        email: this.email,
-        descriptionMessage: this.descriptionMessage
-      };
-
-      this.messengerService.push(messages);
-      //ref(nombre de como se va llamar a nuestra tabla para que guarde nuestros objetos)
-      firebase
-        .database()
-        .ref("messengerContact/" + this.name)
-        .set(messages);
+      // if ( this.name === '') {
+      //   this.error = true;
+      // } else if (this.email === '') {
+      //   this.error = true;
+      // }
       return this.clearForm();
     },
     clearForm() {
       (this.name = ""), (this.email = ""), (this.descriptionMessage = "");
     }
+  },
+  components: {
+    ListArticle
   }
 };
 </script>

@@ -13,6 +13,9 @@
     </div>
     <section class="pt-5 pb-5">
       <div class="container">
+<<<<<<< HEAD
+        <ListArticle />
+=======
         <ul class="list-articles">
           <li>
             <router-link to="/blog-detail">
@@ -35,14 +38,20 @@
             </router-link>
           </li>
         </ul>
+>>>>>>> master
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import ListArticle from "../../components/ListArticles";
+
 export default {
-  name: "BlogPage"
+  name: "BlogPage",
+  components: {
+    ListArticle
+  }
 };
 </script>
 
