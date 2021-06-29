@@ -2,8 +2,12 @@
   <header
     :class="{
       'on-scroll': onScroll,
+<<<<<<< HEAD
       'in-other-page': !isInHomeRoute && !isInBlogRoute,
       'on-scroll': openMenu
+=======
+      'in-other-page': !isInHomeRoute && !isInBlogRoute && !isInBlogDetailRoute
+>>>>>>> master
     }"
     id="header"
   >
@@ -74,8 +78,13 @@ export default {
     isInBlogRoute() {
       return this.$route.name == "BlogPage";
     },
+<<<<<<< HEAD
     isInLoginAdmin() {
       return this.$route.name == "Login";
+=======
+    isInBlogDetailRoute() {
+      return this.$route.name == "BlogDetail";
+>>>>>>> master
     }
   },
   created() {

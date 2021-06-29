@@ -3,7 +3,7 @@
     <HeaderComponent />
     <main
       id="main"
-      :class="{ 'p-0': isInHomeRoute || isInBlogRoute || isInLoginAdmin }"
+      :class="{ 'p-0': isInHomeRoute || isInBlogRoute || isInBlogDetailRoute }"
     >
       <router-view />
     </main>
@@ -28,8 +28,13 @@ export default {
     isInBlogRoute() {
       return this.$route.name == "BlogPage";
     },
+<<<<<<< HEAD
     isInLoginAdmin() {
       return this.$route.name == "Login";
+=======
+    isInBlogDetailRoute() {
+      return this.$route.name == "BlogDetail";
+>>>>>>> master
     }
   }
 };

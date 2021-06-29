@@ -2,7 +2,11 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import BlogPage from "../views/Blog/Blog-page.vue";
+<<<<<<< HEAD
 import BlogDetailPage from "../views/Blog/Blog-detail.vue";
+=======
+import BlogDetail from "../views/Blog/Blog-detail.vue";
+>>>>>>> master
 
 Vue.use(VueRouter);
 
@@ -28,8 +32,13 @@ const routes = [
   },
   {
     path: "/blog-detail",
+<<<<<<< HEAD
     name: "BlogDetailPage",
     component: BlogDetailPage
+=======
+    name: "BlogDetail",
+    component: BlogDetail
+>>>>>>> master
   }
 ];
 
