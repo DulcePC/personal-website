@@ -58,7 +58,7 @@ footer {
     justify-content: center;
 
     li {
-      @include size(40px);
+      // @include size(40px);
       border-radius: 50%;
       border: 1px solid #454545;
       display: flex;

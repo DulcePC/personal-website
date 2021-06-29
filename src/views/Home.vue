@@ -500,9 +500,9 @@ export default {
   }
 
   .contact-form {
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 20px;
-    }
+    // @include media-breakpoint-down(sm) {
+    //   margin-bottom: 20px;
+    // }
   }
 
   .contact-links {
@@ -520,9 +520,9 @@ export default {
       margin-right: 10px;
       font-size: 24px;
 
-      @include media-breakpoint-down(md) {
-        font-size: 14px;
-      }
+      // @include media-breakpoint-down(md) {
+      //   font-size: 14px;
+      // }
     }
 
     &:hover {
@@ -530,9 +530,9 @@ export default {
       color: white;
     }
 
-    @include media-breakpoint-down(md) {
-      font-size: 14px;
-    }
+    // @include media-breakpoint-down(md) {
+    //   font-size: 14px;
+    // }
   }
 }
 </style>
