@@ -3,7 +3,7 @@
     :class="{
       'on-scroll': onScroll,
       'in-other-page': !isInHomeRoute && !isInBlogRoute,
-      'd-none': isInLoginAdmin
+      'on-scroll': openMenu
     }"
     id="header"
   >
